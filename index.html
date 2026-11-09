@@ -542,6 +542,22 @@ body {
   .hero .hl { background-size: 100% 40%; }
   .progress { display: none; }
 }
+
+/* ==========================================================
+   BACKGROUND: DENSITY CONTOURS (CSS only)
+   Faint oval rings, like contour lines of a bivariate normal
+   distribution, radiating from two corners. To make them
+   stronger or softer, change the 0.10 and 0.08 values.
+   ========================================================== */
+.hero, .sec, .sec.alt, .contact-band { background: transparent; }
+html::after { display: none; }
+body {
+  background-color: #efe8dc;
+  background-image:
+    repeating-radial-gradient(ellipse 120% 80% at 88% 12%, transparent 0 38px, rgba(79, 111, 82, 0.10) 38px 39px),
+    repeating-radial-gradient(ellipse 110% 90% at 8% 92%, transparent 0 46px, rgba(181, 96, 62, 0.08) 46px 47px);
+  background-attachment: fixed;
+}
 </style>
 </head>
 <body>
